@@ -1,0 +1,82 @@
+.footer 
+  padding-bottom: 40px
+  @include xxs 
+    padding-bottom: 66px
+  &__top
+    display: flex
+    align-items: flex-end
+    @include xs 
+      flex-direction: column
+      align-items: flex-start
+    @include xxs 
+      flex-direction: column-reverse
+  &__title
+    @include xxs 
+      margin-bottom: 50px
+  &__logo
+    flex: 0 0 146px 
+    margin-right: 60px
+    @include xs 
+      flex: 0 1 auto
+      width: 140px
+      margin-right: 0
+      margin-bottom: 70px
+    @include xxs 
+      margin-bottom: 0
+      width: 100px
+  &__bottom
+    display: grid
+    grid-template-columns: repeat(2, 300px)
+    gap: 110px
+    justify-content: flex-end
+    @include sm 
+      gap: 70px
+    @include xs 
+      grid-template-columns: 444px
+    @include xxs 
+      grid-template-columns: 1fr
+
+  &__col
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__address
+    margin-bottom: 10px
+  &__time
+    margin-bottom: 60px
+    @include xs 
+    margin-bottom: 40px
+  &__tel
+    position: relative
+    margin-bottom: 10px
+    &::after
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 50%
+      height: 1px 
+      width: 0
+      transform: translateX(-50%)
+      background-color: $main-color
+      transition: width 0.3s ease
+    &:hover 
+      &::after
+        width: 100%
+        transition: width 0.3s ease
+  &__email
+    position: relative
+    margin-bottom: 10px
+    &::after
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 50%
+      height: 1px 
+      width: 0
+      transform: translateX(-50%)
+      background-color: $main-color
+      transition: width 0.3s ease
+    &:hover 
+      &::after
+        width: 100%
+        transition: width 0.3s ease
