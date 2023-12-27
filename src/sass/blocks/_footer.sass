@@ -16,6 +16,7 @@
   &__logo
     flex: 0 0 146px 
     margin-right: 60px
+    visibility: hidden
     @include xs 
       flex: 0 1 auto
       width: 140px
@@ -25,6 +26,7 @@
       margin-bottom: 0
       width: 100px
   &__bottom
+    visibility: hidden
     display: grid
     grid-template-columns: repeat(2, 300px)
     gap: 110px
@@ -35,7 +37,6 @@
       grid-template-columns: 444px
     @include xxs 
       grid-template-columns: 1fr
-
   &__col
     display: flex
     flex-direction: column

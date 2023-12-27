@@ -29,6 +29,7 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
+    "gsap": "^3.12.4",
     "gulp-avif": "^1.0.1",
     "gulp-babel": "^8.0.0",
     "swiper": "^7.4.1"

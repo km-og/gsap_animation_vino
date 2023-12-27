@@ -1,9 +1,11 @@
 .preview
   height: 480px
+  visibility: hidden
   &__bg
     height: 100%
     width: 100%
     object-fit: cover
+
 
 .promo
   margin-top: -90px
@@ -13,7 +15,13 @@
     margin-top: -40px
   @include mini
     margin-top: -34px
+  &__title
+    visibility: hidden
   &__wrap
+    min-height: 100vh
+    display: flex 
+    align-items: center
+  &__inner
     display: flex
     align-items: stretch
     justify-content: flex-end
@@ -23,6 +31,18 @@
       margin-left: auto
     @include xxs
       max-width: 100%
+  &__left
+    position: relative
+    flex: 1 1 auto
+    margin-right: 30px
+    @include sm
+      display: none
+  &__left-inner
+    position: absolute
+    width: 100%
+    bottom: 0
+    img 
+      width: 100%
   &__info
     margin-right: 30px
     flex: 0 0 380px
@@ -33,19 +53,21 @@
       margin-bottom: 70px
   &__img
     flex: 0 1 482px
+    visibility: hidden
     img
         heigth: 100%
         object-fit: cover
     @include sm
       height: 576px
       flex: 0 1 auto
+      visibility: inherit
       img
         width: 100%
     @include xxs
       height: 360px
 
 
-.featers
+.features
   &__wrap
     padding-left: 100px
     display: grid
@@ -124,7 +146,7 @@
 
 .tradition
   padding-bottom: 342px
-  background-color: $main-color
+  background-color: &main-color
   @include sm 
     padding-bottom: 614px
   @include xxs 
@@ -251,12 +273,35 @@
 
 
 .story
-  background-color: $main-color
+  background-color: &main-color
+  overflow: hidden
 
-.swiper-slide
-  height: auto
-  img
+.slider
+  overflow: hidden
+  width: 100vw
+  &__wrapper
+    width: 100vw
+    height: 100vh
+    display: flex
+  &__slide
+    flex: 0 0 100%
+    height: 100%
+    position: relative
+  &__text
+    width: 85%
+    position: absolute 
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 70px 
+    font-family: $arina
+  &__img
     width: 100%
     height: 100%
-    object-fit: cover
+    img 
+      width: 100%
+      height: 100%
+      object-fit: cover
 
+.parallax
+  overflow: hidden
