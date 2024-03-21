@@ -4,4 +4,4 @@
 Подключила слайдер https://swiperjs.com/
 Анимации реализованы с помощью gsap.
 
-Ссылка на сайт: http://km-og.ru/
+Ссылка на сайт: https://km-og.github.io/vino/
